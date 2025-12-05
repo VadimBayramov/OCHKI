@@ -3176,7 +3176,9 @@
 
             segmentWidth = document.querySelector('.segment').offsetWidth;
 
-            setNumber(balance, parseInt(balance.innerHTML) - 5);
+            if (clickCount === 1) {
+                setNumber(balance, parseInt(balance.innerHTML) - 5);
+            }
 
             if (isLastSegmentVisible() && !isChickenMovementMode) {
                 isChickenMovementMode = true;
